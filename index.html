@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICICI Direct</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        body {
+            color: #000000;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        p {
+            font-size: 1.4rem;
+            margin: 0;
+            padding: 0;
+            line-height: initial;
+        }
+        
+        a,
+        a:hover {
+            color: #e87717;
+            text-decoration: none;
+        }
+        
+        h2 {
+            color: #053d6e;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .logo {
+            width: 100%;
+        }
+        
+        .zero-account {
+            background-color: #f9f9f9;
+            color: #053d6e;
+            filter: drop-shadow(0px 20px 20px rgba(151, 151, 151, 0.2));
+            margin-top: 30px;
+            text-align: center;
+            padding: 45px 19px;
+            width: 100%;
+        }
+        
+        .zero-account h2 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            margin-bottom: 35px;
+        }
+        
+        .zero-account h2 span {
+            font-weight: 900;
+        }
+        
+        .zero-account p {
+            font-size: 2.4rem;
+            font-weight: 900;
+            font-style: italic;
+        }
+        
+        .features-sec {
+            margin: 45px 0;
+        }
+        
+        .heading {
+            display: inline-block;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            padding-bottom: 15px;
+            position: relative;
+            width: auto;
+        }
+        
+        .heading::before {
+            content: '';
+            border-bottom: 4px solid #053d6e;
+            bottom: 0;
+            display: inline-block;
+            left: 0;
+            position: absolute;
+            width: 120px;
+        }
+        
+        .boxes {
+            border-radius: 8px;
+            background-color: #ffffff;
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.3));
+            text-align: center;
+            padding: 25px 15px;
+            margin: 15px 0;
+            width: 23%;
+        }
+        
+        .boxes img {
+            margin-bottom: 25px;
+        }
+        
+        .boxes .title {
+            color: #e87817;
+            font-size: 2.1rem;
+            font-weight: 700;
+            line-height: initial;
+        }
+        
+        .boxes p {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        
+        .box-sec {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .new-account {
+            border-radius: 24px;
+            filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+            background-color: #ffffff;
+            border: 1px solid rgba(151, 151, 151, 0.2);
+            padding: 25px;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .new-account h3 {
+            color: #4a4a4a;
+            font-size: 2.1rem;
+            position: relative;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .new-account h3:before {
+            content: '';
+            border-bottom: 4px solid #e87717;
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 15%;
+        }
+        
+        .new-account h3 span {
+            font-weight: 900;
+        }
+        
+        .new-account input {
+            border-radius: 4px;
+            background-color: #ffffff;
+            border: 1px solid rgba(5, 61, 110, 0.4);
+            color: #000000;
+            font-size: 1.6rem;
+            padding: 8px 15px;
+            justify-content: center;
+            text-align: center;
+            margin-top: 15px;
+            max-width: 300px;
+            width: 100%;
+        }
+        
+        .orange-btn {
+            border-radius: 26px;
+            background-color: #e87817;
+            border: 1px solid #e87817;
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 25px 0;
+            width: 180px;
+            height: 50px;
+            transition: 0.5s;
+        }
+        
+        .orange-btn:hover {
+            background-color: transparent;
+            color: #e87717;
+        }
+        
+        .new-account input::placeholder {
+            color: #000000;
+        }
+        
+        .new-account p a {
+            font-weight: 700;
+        }
+        
+        .plan-div {
+            border-radius: 8px;
+            background-color: #ffffff;
+            border: 1px solid rgba(74, 74, 74, 0.2);
+            padding: 20px 15px;
+            margin: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .inner {
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        .inner::before {
+            content: '';
+            border-bottom: 2px solid #e87717;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            width: 110px;
+        }
+        
+        .inner:last-child::before {
+            display: none;
+        }
+        
+        .inner h3 {
+            color: #444444;
+            font-size: 4.8rem;
+            font-weight: 500;
+        }
+        
+        .inner p {
+            color: #444444;
+            font-size: 2.1rem;
+        }
+        
+        .brokerage-plan {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .brokerage-plan h4 span {
+            font-size: 2.4rem;
+        }
+        
+        .brokerage-plan h4 {
+            color: #444444;
+            font-size: 3.2rem;
+            font-weight: 400;
+            line-height: initial;
+        }
+        
+        .brokerage-plan p {
+            color: #444444;
+            font-size: 1.4rem;
+        }
+        
+        .step-apply {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .step-box {
+            border-radius: 16px;
+            background-color: #ffffff;
+            filter: drop-shadow(4.243px 4.243px 12px rgba(0, 0, 0, 0.08));
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            margin: 13px 0;
+            width: 100%;
+        }
+        
+        .step-box p {
+            color: #e87717;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        
+        .number {
+            border-radius: 36px;
+            background-color: #f9f9f9;
+            border: 1px solid rgba(151, 151, 151, 0.2);
+            font-size: 4.8rem;
+            font-weight: 900;
+            color: #262b36;
+            display: inline-block;
+            margin-right: 30px;
+            width: 72px;
+            height: 72px;
+            text-align: center;
+        }
+        
+        .faqs-sec {
+            margin-top: 50px;
+        }
+        
+        .card {
+            border: 0px;
+        }
+        
+        .card-header {
+            border-radius: 5px!important;
+            background-color: #ffffff;
+            border: 1px solid #d1d1d1;
+            margin-bottom: 10px!important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-title {
+            color: #122e45;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0px;
+            padding-right: 15px;
+        }
+        
+        .card-body p {
+            font-size: 1.6rem;
+            padding-bottom: 10px;
+        }
+        
+        .accordion .card-header:after {
+            font-family: 'FontAwesome';
+            content: "\f068";
+            float: right;
+            color: #000000;
+            font-size: 2.8rem;
+        }
+        
+        .accordion .card-header.collapsed:after {
+            content: "\f067";
+        }
+        
+        footer {
+            margin-top: 50px;
+        }
+        
+        .footer-top {
+            background: #3c3c3c;
+            color: #82898c;
+            font-size: 1.2rem;
+            padding: 30px 17px;
+        }
+        
+        .footer-top p,
+        .copy-right p {
+            line-height: 18px;
+        }
+        
+        .footer-top span {
+            color: #e87717;
+        }
+        
+        .copy-right {
+            background: #053c6e;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 20px 17px;
+            text-align: center;
+        }
+        
+        .get-started {
+            background: #e87717;
+        }
+        
+        .get-started a {
+            color: #fff;
+            display: block;
+            font-size: 2.4rem;
+            font-weight: 700;
+            padding: 10px 17px;
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .inner {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (min-width: 361px) and (max-width: 768px) {
+            .boxes {
+                width: 48%;
+            }
+        }
+        
+        @media screen and (max-width: 360px) {
+            .boxes {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container p-0">
+            <div class="row m-0">
+                <div class="logo text-center pt-5">
+                    <a href="#"><img src="images/icici-logo.png" alt="icici direct logo"></a>
+                </div>
+
+                <div class="zero-account">
+                    <h2>Open an <span>ICICI direct Demat & Trading A/C  in 10 mins</span></h2>
+                    <p>Zero account opening charges</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading">
+                            KEY FEATURES
+                        </h2>
+
+                        <div class="box-sec">
+                            <div class="boxes">
+                                <img src="images/EATM-icon.png" alt="EATM">
+                                <div class="title">5 Min</div>
+                                <p>Payout with eATM</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/paisa-icon.png" alt="Paise">
+                                <div class="title">7 paise</div>
+                                <p>Prepaid <br> Brokerage Plans</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/award-icon.png" alt="Award Winning">
+                                <p>Access to </p>
+                                <div class="title">Award-winning</div>
+                                <p>research</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/stock-icon.png" alt="Margin funding">
+                                <div class="title">8.7% P.A</div>
+                                <p>Margin Funding at buy stocks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sign-up-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="new-account">
+                            <h3>Sign up for a <span>new account</span></h3>
+
+                            <input type="text" name="mobile" id="" placeholder="Enter Your Mobile Number">
+                            <br>
+                            <button class="orange-btn">Get Started</button>
+
+                            <p>Already have an account with us? <a href="#"> Login here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plan-sec">
+            <div class="container">
+                <div class="plan-div">
+                    <div class="inner">
+                        <h3>&#8377;0*</h3>
+                        <p>Futures trading charges</p>
+                    </div>
+                    <div class="inner">
+                        <h3>&#8377;20</h3>
+                        <p>Options & Intraday trading <br> (Unlimited per order)</p>
+                    </div>
+                    <div class="inner">
+                        <h3>&#8377;20</h3>
+                        <p>Commodity & Currency Derivative <br> (Unlimited per order)</p>
+                    </div>
+
+                    <div class="brokerage-plan">
+                        <h4><span>With</span> ICICI Direct Neo Brokerage plan</h4>
+                        <p>* Interest on SAM in F&O at the rate of 0.025% per day </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading text-uppercase">
+                            Why choose <br> ICICIdirect account?
+                        </h2>
+
+                        <div class="box-sec">
+                            <div class="boxes">
+                                <img src="images/SAM-icon.png" alt="SAM">
+                                <p>Use</p>
+                                <div class="title">100%</div>
+                                <p>SAM in F&O</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/rate-icon.png" alt="strike rate">
+                                <div class="title">72%</div>
+                                <p>Strike Rate on <br> Gladiator Stocks</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/flash-trade-icon.png" alt="flash trade">
+                                <div class="title">Flash Trade</div>
+                                <p>Fast, safe & Seamless F&O trading</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/execution-icon.png" alt="Execution Algos">
+                                <div class="title">Execution Algos</div>
+                                <p>Automated orders for better prices</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/customers-icon.png" alt="customer">
+                                <div class="title">80Lakh+</div>
+                                <p>Lakh Customers</p>
+                            </div>
+                            <div class="boxes">
+                                <img src="images/home-icon.png" alt="Investments & Liability Products">
+                                <div class="title">45+</div>
+                                <p>Investments & Liability Products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="easy-steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading">
+                            3 Easy Steps to Apply
+                        </h2>
+
+                        <div class="step-apply">
+                            <div class="step-box">
+                                <div class="number">1</div>
+                                <p>Verify Personal Details</p>
+                            </div>
+                            <div class="step-box">
+                                <div class="number">2</div>
+                                <p>Self KYC </p>
+                            </div>
+                            <div class="step-box">
+                                <div class="number">3</div>
+                                <p>e-Sign </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faqs-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="heading text-uppercase">
+                            Faqs
+                        </h2>
+
+                        <div id="accordion" class="accordion">
+                            <div class="card mb-0">
+                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                                    <a class="card-title">
+                                        What is Trading account?
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                                    <p>The online trading account gives you the convenience of opening a online trading account. You can view live share price, do share trading on NSE, BSE, and MCX, trade in Futures & Options, Currencies, Commodities, invest
+                                        in Mutual Funds, IPOs and Life Insurance through our seamless and secure online trading account.
+                                    </p>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    <a class="card-title">
+                                        What are the features of 
+                                        Trading account?
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                                    <p><b>Seamless Trading:</b> You can trade in shares without going through the hassle of tracking settlement cycles, writing cheques and transfer instructions. Absolutely hassle free!
+                                    </p>
+
+                                    <p>
+                                        <b>Security:</b> Instead of transferring monies to a broker's pool or towards deposits, you can manage your own demat and bank accounts when you trade through ICICIdirect.com. It provides you the flexibility to
+                                        pay only when you trade
+                                    </p>
+                                    <p>
+                                        <b>Wide range of products:</b> Share trading in both NSE and BSE, innovative offerings like - Margin, MarginPlus, BTST, SPOT. Derivatives trading, overseas trading, mutual funds, IPOs and on-line life insurance
+                                    </p>
+                                    <p>
+                                        <b>Control:</b> You can be rest assured, that your order will be precisely for the amount you wanted it to be, without any deviation, giving you full control of your money and your trades
+                                    </p>
+                                    <p>
+                                        <b>Award Winning Research:</b> We understand the need for the right research to make the right investment decision and has focused heavily in this area. Our team with its consistent delivery has been voted as the
+                                        'Most preferred brand of financial advisory services' at the CNBC Awaaz Consumer Awards, 2007
+                                    </p>
+                                    <p>
+                                        <b>Tracking and Review:</b> Monitoring your investments is as important if not more than making that investment itself. Our portfolio tracker and watchlist along with sms alerts will always keep you updated on the
+                                        status of your investments with us and act on them when required
+                                    </p>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    <a class="card-title">
+                                        What documents are required to open online account with us?
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p><b>Documents required:</b> </p>
+                                        <p> JPEG Image of Permanent Account Number (PAN) card </p>
+                                        <p> JPEG Image of Cancelled cheque/Bank Statement/Bank Passbook </p>
+                                        <p>JPEG Image of Signature on a blank paper</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                    <a class="card-title">
+                                        Apart from Trading account, what else is required to start online investment?
+                                    </a>
+                                </div>
+                                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>After opening trading account, you need to have a bank balance in your linked Savings Account with your trading account and one has to choose his brokerage plan like Prime or prepaid.</p>
+                                    </div>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                    <a class="card-title">
+                                        What is the difference between Demat and Trading account?
+                                    </a>
+                                </div>
+                                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>The key difference between a Demat and a Trading account is that a Demat account is used to hold your securities such as your share certificates and other documents in electronic format whereas a Trading account
+                                            is used for buying and selling these securities in the stock market.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                    <a class="card-title">
+                                        What are the charges to open ICICIdirect Demat and Trading account?
+                                    </a>
+                                </div>
+                                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Account opening charges for trading account depends on the scheme opted by customer for Demat account charges depend on Demat account opted by customer (BSDA / REGULAR).</p>
+                                        <p>The Account opening fee varies from 0 to ₹975 rupees. There are multiple schemes available, for more details on the scheme, please call on 1860 123 1122.</p>
+                                        <p>There is no AMC (Annual Maintenance charges) for Demat Account for the first Year. However, charge of ₹700 (excluding taxes) is levied from 2nd year onwards.</p>
+                                        <p>However, if the Demat account is under BSDA, no AMC is levied for holding value upto ₹50,000.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <p>
+                        <span>***Brokerage Plan **</span>Best Retail Broker of the Year 2018 & Retail Broker of the Year 2019 at the Outlook Money Awards. ~Margin collected will be VaR margins and ELM as per SEBI Circular , CIR/HO/MIRSD/DOP/CIR/P/2019/139
+                        dated November 19, 2019 and the “number of times” exposure will be based on the Upfront Margin applicable. + Products are not an approved product of Exchange and any dispute related to this will not be dealt at Exchange platform.
+                        ++ ESOP funding will be done by ICICI Bank. ^^Margin Trading is allowed subject the provisions of SEBI Circular CIR/MRD/DP/54/2017 dated June 13, 2017 and the terms and conditions mentioned in rights and obligations statement issued
+                        by ICICI Securities. <span>#Terms
+                        and conditions</span> of the offers. By clicking on "Send OTP", you understand and agree to allow ICICI Direct or ICICI Bank to contact you through Calls, SMSs, Emails etc. to assist you in the account opening formalities or to
+                        offer other products and services of ICICI Securities, on all days (including Sundays), irrespective of your preference registered with your access provider. Contact us – Registered Office: ICICI Venture House, Appasaheb Marathe
+                        Marg, Prabhadevi, Mumbai - 400 025, India Tel: (91 22) 6807 7100 Fax: (91 22) 6807 7803. Privacy <span>Policy Disclaimer.</span></p>
+                </div>
+            </div>
+            <div class="copy-right">
+                <div class="container">
+                    <p>Copyright© 2022. All rights Reserved. ICICI Securities Ltd. ®trademark registration in respect of the concerned mark has been applied for by ICICI Bank Limited</p>
+                </div>
+            </div>
+            <div class="get-started">
+                <a href="#">Get Started</a>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+
+</html>
